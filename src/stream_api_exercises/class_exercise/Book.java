@@ -38,4 +38,8 @@ public class Book {
                 ", coverType=" + coverType +
                 '}';
     }
+
+    public int getPublishingYear() {
+        return publishingYear;
+    }
 }
