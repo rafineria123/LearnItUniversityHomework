@@ -25,6 +25,9 @@ public class Book {
         this.coverType = coverType;
     }
 
+    public Book() {
+    }
+
     @Override
     public String toString() {
         return "Book{" +
@@ -41,5 +44,13 @@ public class Book {
 
     public int getPublishingYear() {
         return publishingYear;
+    }
+
+    public Author[] getAuthors() {
+        return authors;
+    }
+
+    public Publisher getPublisher() {
+        return publisher;
     }
 }
