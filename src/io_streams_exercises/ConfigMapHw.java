@@ -15,6 +15,15 @@ public class ConfigMapHw {
         Optional<String> result = bufferedReader.lines().filter(s -> s.contains(keyName)).findFirst();
         if(result.isEmpty()) return null;
         return result.get().split("=")[1];
+
+        //Better version
+        /*
+        Map<String, String> collect = Files.lines(configMapFilePath)
+				.collect(Collectors.toMap(line -> ((String)line).split("=")[0],
+											line -> ((String)line).split("=")[1]));
+
+		return collect.get(keyName);
+         */
     }
 
 }
