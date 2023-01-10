@@ -1,4 +1,4 @@
-package stream_api_exercises.inheritance_polymorphism_exercise;
+package stream_api_exercises.inheritance_polymorphism_exercises.exercise_one;
 
 import java.util.Arrays;
 import java.util.Objects;
