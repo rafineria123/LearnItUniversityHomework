@@ -1,4 +1,4 @@
-package stream_api_exercises.inheritance_polymorphism_exercise;
+package stream_api_exercises.inheritance_polymorphism_exercises.exercise_one;
 
 public abstract class Sweet {
     private String name;
