@@ -18,7 +18,6 @@ public class Main {
         TimeUnit.SECONDS.sleep(5);
         ByteArrayInputStream bais = new ByteArrayInputStream(new byte[] { '\n' });
         System.setIn(bais);
-        TimeUnit.SECONDS.sleep(10);
     }
 
     private static class Spam extends Thread{
@@ -58,7 +57,7 @@ public class Main {
 
         @Override
         public void run() {
-            threadToInterrupt.run();
+            this.threadToInterrupt.run();
             while(true){
                 try {
                     if(System.in.available() > 0 && System.in.read() == '\n'){
@@ -71,7 +70,7 @@ public class Main {
         }
 
         public void startSpamming(){
-            run();
+            start();
         }
     }
 }

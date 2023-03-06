@@ -5,9 +5,9 @@ import java.time.Clock;
 public class Main {
     public static void main(String[] args) {
          Thread threadA = new Thread(new impRunnable());
-         threadA.run();
+         threadA.start();
          ExtThread threadB = new ExtThread();
-         threadB.run();
+         threadB.start();
          Thread threadC = new Thread(() -> {
              Clock clock = Clock.systemDefaultZone();
              long currentTime = clock.millis();
@@ -15,9 +15,9 @@ public class Main {
                  System.out.println(Thread.currentThread().getName()+"C");
              }
          });
-         threadC.run();
+         threadC.start();
          Thread threadD = new Thread(Main::printThreadName);
-         threadD.run();
+         threadD.start();
     }
 
     public static void printThreadName(){
