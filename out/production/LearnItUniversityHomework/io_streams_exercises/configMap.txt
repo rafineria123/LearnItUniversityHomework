@@ -1,0 +1,3 @@
+discount=0.1
+database.user=admin
+database.password=qwerty
