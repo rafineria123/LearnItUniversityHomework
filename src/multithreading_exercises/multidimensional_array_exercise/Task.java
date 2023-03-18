@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.concurrent.*;
 
-public class FutureSolution {
+public class Task {
     private static final int ROWS = 4;
     private static final int COLUMNS = 100;
     private static Clock clock = Clock.systemDefaultZone();
@@ -118,7 +118,7 @@ public class FutureSolution {
 
         @Override
         public Integer call() throws Exception {
-            return FutureSolution.findMaxInOneDimensionArray(FutureSolution.generatedArray[id]);
+            return Task.findMaxInOneDimensionArray(Task.generatedArray[id]);
         }
     }
 
@@ -134,7 +134,7 @@ public class FutureSolution {
 
         @Override
         public void run() {
-            int result = FutureSolution.findMaxInOneDimensionArray(generatedArray[id]);
+            int result = Task.findMaxInOneDimensionArray(generatedArray[id]);
             if(result > countDownLatchResult) countDownLatchResult = result;
             countDownLatch.countDown();
 

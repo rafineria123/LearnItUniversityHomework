@@ -2,7 +2,7 @@ package multithreading_exercises.thread_name_exercise;
 
 import java.time.Clock;
 
-public class Main {
+public class Task {
     public static void main(String[] args) {
          Thread threadA = new Thread(new impRunnable());
          threadA.start();
@@ -16,7 +16,7 @@ public class Main {
              }
          });
          threadC.start();
-         Thread threadD = new Thread(Main::printThreadName);
+         Thread threadD = new Thread(Task::printThreadName);
          threadD.start();
     }
 
